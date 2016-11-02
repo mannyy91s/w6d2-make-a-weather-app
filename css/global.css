@@ -16,16 +16,20 @@ img {
 
 #appContainer .top-section h4 {
   padding-top: 60px;
-  font-size: 10vw;
+  font-size: 8vw;
 }
 
 #appContainer .top-section p {
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
 #appContainer h1 {
-  font-size: 40vw;
+  font-size: 30vw;
   padding-top: 40px;
+}
+
+#appContainer .bottom-section {
+  font-size: 4vw;
 }
 
 #appContainer .bottom-section p {

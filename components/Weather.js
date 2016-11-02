@@ -2,6 +2,7 @@ import React from 'react'
 import classAutoBind from 'react-helpers/dist/classAutoBind'
 import { sharedState, attachSharedState, detachSharedState } from 'react-helpers/dist/sharedState'
 import { Link } from 'react-router'
+import Nav from '../components/Nav.js'
 
 class Weather extends React.Component{
     constructor(props){
@@ -18,8 +19,6 @@ class Weather extends React.Component{
                 temp: Math.round(data.main.temp * (9/5) - 459.67) + '°',
                 cond: data.weather[0].description
             })
-            console.log(data)
-
         })
         attachSharedState(this)
     }
@@ -28,7 +27,8 @@ class Weather extends React.Component{
     }
 
     render() {
-        var date = moment().format('MMMM Do YYYY [at] hh:mm a')
+        var date = moment().format('MMMM Do YYYY [at] hh:mm A')
+        console.log(date)
         return <div>
         <div className="top-section">
           <h4>{this.state.city}</h4>
@@ -37,6 +37,9 @@ class Weather extends React.Component{
         <div className="bottom-section">
           <h1>{this.state.temp}</h1>
           <p>{this.state.cond}</p>
+        </div>
+        <div>
+        <Nav />
         </div>
         </div>
     }
