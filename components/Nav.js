@@ -14,7 +14,7 @@ class Nav extends React.Component{
         <Link to="/forecast">
         <button type="button" className="btn btn-default">5 Day</button>
         </Link>
-        <Link to="/weather">
+        <Link to="/settings">
         <button type="button" className="btn btn-default">Settings</button>
         </Link>
         </div>

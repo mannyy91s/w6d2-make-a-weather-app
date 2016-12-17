@@ -1,4 +1,5 @@
 module.exports = {
+    devtool: 'inline-source-map',
   entry: {
     global: './js/global.js',
   },
