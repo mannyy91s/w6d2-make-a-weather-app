@@ -13,12 +13,13 @@ sharedState({
   city: savedCity || 'Indianapolis'
 })
 
+window.path = window.location.href.includes('github') ? '/w6d2-make-a-weather-app' : ''
 
 ReactDOM.render(
     <Router history={browserHistory}>
-        <Route path="/" component={Weather} />
-        <Route path="/forecast" component={Forecast} />
-        <Route path="/settings" component={Settings} />
+        <Route path={path + "/"} component={Weather} />
+        <Route path={path + "/forecast"} component={Forecast} />
+        <Route path={path + "/settings"} component={Settings} />
     </Router>
     ,document.getElementById('appContainer')
 )
